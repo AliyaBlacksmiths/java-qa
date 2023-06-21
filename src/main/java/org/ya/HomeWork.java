@@ -14,7 +14,12 @@ public class HomeWork {
      * */
     public static int reverse(int value) {
         // todo
-        return 0;
+        int a = value / 1000;//первое
+        int b = (value / 100) % 10;//второе
+        int c = (value % 100)/10;//третье
+        int d = value % 10;//четвертое
+        int reverseNumber = d*1000 + c*100 + b*10 + a;
+        return reverseNumber;
     }
 
     /**
@@ -27,6 +32,9 @@ public class HomeWork {
      * */
     public static int difference(int value) {
         // todo
-        return 0;
+        int a = value / 100;//получаем первые два числа
+        int b = value % 100;//получаем два последних числа
+        int c = a - b;
+        return c;
     }
 }
