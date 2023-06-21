@@ -31,10 +31,7 @@ public class HomeWork {
      * подумать над кейсами
      * */
     public static int difference(int value) {
-        // todo
-        int a = value / 100;//получаем первые два числа
-        int b = value % 100;//получаем два последних числа
-        int c = a - b;
-        return c;
+        int valueDifference = (value / 100) - (value % 100);
+        return valueDifference;
     }
 }
