@@ -2,6 +2,7 @@ package org.ya;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.ya.lesson4.HomeWork4;
 
 public class HomeWorkTests {
 
@@ -9,10 +10,8 @@ public class HomeWorkTests {
     void reverseTest() {
         int actually = HomeWork.reverse(1234);
         int expected = 4321;
-        //TODO Вопрос, почему нижний закоменченный принт выводит 10, а не 1?
-//        System.out.println(HomeWork.reverse(10));
         Assertions.assertEquals(expected, actually);
-        Assertions.assertEquals(HomeWork.reverse(1000), 1);//тут как раз не значащие нули?
+        Assertions.assertEquals(HomeWork.reverse(1000), 1);
         Assertions.assertEquals(Integer.toString(actually).length(), 4);
     }
 
@@ -21,5 +20,34 @@ public class HomeWorkTests {
         int actually = HomeWork.difference(7968);
         int expected = 79 - 68;
         Assertions.assertEquals(expected, actually);
+    }
+
+    @Test
+    void productMaxElementsTest(){
+        int[] array =  {1, 100, 100, 35, 0, 6};
+        long actually = HomeWork4.maxTwinMultiply(array);
+        long expected = 10000;
+        Assertions.assertEquals(expected, actually);
+    }
+
+    @Test
+    void isSortedTrueTest(){
+        int[] array =  {7, 7, 5, 4};
+        boolean actually = HomeWork4.isSorted(array);
+        Assertions.assertTrue(actually);
+    }
+
+    @Test
+    void isSortedFalseTest(){
+        int[] array =  {7, 7, 8, 3, 1};
+        boolean actually = HomeWork4.isSorted(array);
+        Assertions.assertFalse(actually);
+    }
+
+    @Test
+    void countLetters(){
+        String src =  "aaabbbddca";
+        String actually = HomeWork4.rleCompress(src);
+        System.out.println(actually);
     }
 }
