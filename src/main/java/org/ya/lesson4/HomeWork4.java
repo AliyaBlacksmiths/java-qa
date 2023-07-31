@@ -13,15 +13,11 @@ public class HomeWork4 {
      * */
     //TODO никак не могу победить эту задачу:(
     public static boolean isSorted(int[] array) {
-
-        //  5 5 7
-        // 7 7 5 4 6
-        // 1 1 3 4
         if (array.length > 2) {//если два числа, то в любом случае отсортирован
             for (int i = 1; i < array.length - 1; i++) {
-                while (array[i] == array[i + 1]) {//не проверяем сортировку для одинаковых чисел
-                    i++;
-                }
+//                while (array[i] == array[i + 1]) {//не проверяем сортировку для одинаковых чисел, нужно как-то возвращать в этом случае true
+//                    i++;
+//                }
                 if ((array[i] <= array[i + 1]) && (array[i] >= array[i - 1])) {
                     continue;
                 }
@@ -90,6 +86,7 @@ public class HomeWork4 {
         return result = String.format("%d(a)%d(b)%d(c)%d(d)", count_a, count_b, count_c, count_d);
     }
 
+    //TODO Сделаю в 5 lesson
     /**
      * 4(a)3(b)1(c)2(d) -> aaaabbbcdd
      * 1(a)1(b)1(c) -> abc
