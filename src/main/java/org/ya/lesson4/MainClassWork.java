@@ -1,9 +1,11 @@
 package org.ya.lesson4;
+import java.util.Random;
+
 
 public class MainClassWork {
     public static int findMinimum(int[] array) {
         // array.length
-        // for
+        // fori
 //        for (int i = 0; i < array.length; i++) {
 //            System.out.print(array[i] + " ");
 //        }
